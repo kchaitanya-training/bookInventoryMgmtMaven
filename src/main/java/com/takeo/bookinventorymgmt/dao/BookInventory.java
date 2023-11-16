@@ -21,7 +21,15 @@ public class BookInventory {
 	public void addBook(Book book) throws BookInventoryException{
 		System.out.println("book "+book.getBookName());
 		try {
-			Connection con=DBConnection.getConnection();
+			
+			java.util.Date dt = new java.util.Date();
+
+			java.text.SimpleDateFormat sdf = 
+			     new java.text.SimpleDateFormat("yyyy-MM-dd");
+
+			String currentTime = sdf.format(dt);
+	    
+	    Connection con=DBConnection.getConnection();
 		PreparedStatement ps=	con.prepareStatement("");//Insert query
 		ps.execute();
 			con.close();
