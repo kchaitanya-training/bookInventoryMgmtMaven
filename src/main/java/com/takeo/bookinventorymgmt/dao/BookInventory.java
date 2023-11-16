@@ -19,13 +19,6 @@ public class BookInventory {
 		
 		
 		
-		if(bookList.size()==4){
-			throw new BookInventoryException("the bucket is overloaded, please do not sent any vlaues");
-		}
-			
-		    bookList.add(book);
-		
-		
 		
 		
 	}
@@ -38,21 +31,13 @@ public class BookInventory {
 	public List<String> getBookNames(){
 		List<String> list=new ArrayList();
 
-		for(Book b:bookList){
-			list.add(b.getBookName());
-		}
+		
 		
 		return list;
 	}
 	
 	public void updateBookName(Book book,String bookName){
-		for(Book b:bookList){
-			if(b.getBookName().equals(book.getBookName())){
-				
-				b.setBookName(bookName);
-				
-			}
-		}
+		
 	}
 
 }
